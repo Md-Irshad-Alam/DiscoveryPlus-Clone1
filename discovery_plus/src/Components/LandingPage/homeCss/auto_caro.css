@@ -1,0 +1,93 @@
+
+
+.slideshow {
+  max-width: 70.2vw;
+  overflow: hidden;
+ 
+}
+
+.slideshowSlider {
+  transition: ease 1000ms;
+  display: flex;
+}
+
+.slide {
+  display: inline-block;
+  height: auto;
+}
+
+/* Buttons */
+
+.slideshowDots {
+  text-align: center;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: #c4c4c4;
+}
+
+.slideshowDot.active {
+  background-color: #6a0dad;
+}
+.fbzSf {
+    display: flex;
+}
+.thsnd_container {
+    height: 32vw;
+    display: flex;
+}
+.thousand_contant {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(38, 41, 49);
+    padding: 40px;
+    border-radius: 6px;
+    max-width: 70vw;
+}
+.thsd_text {
+    width: 20vw;
+    margin-right: 80px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.being_heading {
+    font-family: Roboto-Medium, sans-serif;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    display: -webkit-box;
+     text-overflow: ellipsis; 
+     -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+}
+.being_desc {
+    font-family: Roboto-Regular, sans-serif;
+    color: rgb(214, 220, 228);
+    font-size: 16px;
+    line-height: 1.63;
+    padding-top: 6px;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+}
+.sliding_image {
+    width: 48vw;
+    min-height: 27.5vw;
+}
+.cover_sliding {
+    object-position: center top;
+    border-radius: 6px;
+    width: 100%;
+}
+

@@ -1,0 +1,79 @@
+
+.feedbacks {
+    display: flex;
+    flex-direction: row;
+    background-color: #1a1c21;
+    margin:auto;
+    width: 100%;
+    flex-basis: 1;
+}
+.feed_blks {
+    border-radius: 9px;
+    margin: 10px;
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 2px dashed rgb(56, 62, 71);
+}
+.icon_start, .icon_end {
+        width: 27.3px;
+        height: 22.7px;
+        margin: 10px;      
+}
+.iqbrwR {
+    display: flex;
+}
+.fTbwUB{
+    display: flex; 
+    flex-direction: row-reverse;
+}
+.eUgDnc{
+    width: auto;
+}
+.feed_content {
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.51;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(191, 197, 205);
+    margin: 0px 42px 42px;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+}
+.feed_person {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.feed_name {
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 18px;
+    text-align: left;
+    color: rgb(155, 161, 169);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-right: 10px;
+}
+.stars {
+    display: inline-block;
+    padding: 3px;
+    vertical-align: middle;
+    line-height: 1;
+    font-size: 1.5em;
+}
+.active_star {
+    color: rgb(255, 164, 36);
+}
+.inactive_star {
+    color: rgb(108, 114, 122);
+}

@@ -1,0 +1,53 @@
+
+@media screen and (min-width:400px) and (max-width:720px) {
+    .Image_container{
+      
+        
+        padding: 5px;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 12px;
+       
+    }
+    .image_cont{
+        width: fit-content;
+        height: fit-content;
+        border-radius:10px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 12px;
+       
+    }
+    .age_rating{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+    .main_kids_container{
+        display: flex;
+        font-size: 12px;
+        
+    }
+    .col-4{
+
+    }
+    
+}
+/* @media screen and (min-width:720px) and (max-width:1080px) {
+    .Image_container{
+
+    }
+    /* .main_kids_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red; */
+    /* } */
+
+/* } */ 
