@@ -39,12 +39,14 @@ import "./CSS/explore.css"
 import { Link } from "react-router-dom";
 import Short from "../shorts/short";
 import {Kids} from "../Kids_componanrts/Kids"
+import { Navbar } from "../LandingPage/navbar";
 
 
 
 export const Explore=()=>{
 
     return <>
+    <Navbar/>
    <div id="main"  >
 
      <div id="app" className="appStyle">

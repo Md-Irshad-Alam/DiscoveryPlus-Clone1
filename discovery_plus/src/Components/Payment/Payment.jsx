@@ -1,9 +1,11 @@
 import React from 'react'
+import { Navbar } from '../LandingPage/navbar'
 import "./payment.css"
 const Payment = () => {
   
   return (
     <div className='body'>
+     
 
   <div className="main">
         <div className="firstpart">

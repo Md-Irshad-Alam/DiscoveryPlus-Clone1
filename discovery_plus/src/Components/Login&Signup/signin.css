@@ -1,42 +1,15 @@
-#centerbox{
 
-
- text-align: center;
-    color:white;
-    margin-top: 80px;
+.login_12345{
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    
+    border: 2px solid rgb(40, 38, 38);
+    
    
 }
- #centerbox >div{
-     justify-content: center;
-     padding:30px;
-     align-items: center;
-     
-     
+.login_12345 input{
+    background-color: rgba(221, 214, 221, 0.53);
+    border: 2px solid white;
+}
 
- }
-
- div > input{
-     margin-top: 20px;
-     max-width: 400px;
-     background-color:#1A1C21  ;
-     border: none;
-     border-bottom:1px solid rgb(62,64,73);
-     text-align: center;
-    padding:10px;
-    color:rgb(112, 112, 117)
-
- }
-div > button{
-    margin-top: 20px;
-     background-color: rgb(69, 108, 235) ;
-    width: 300px;
-    height:50px;
-    border-radius: 10px;
-    color:rgb(255, 255, 255);
-    margin-bottom: 20px;
- }
-   div>span{
-       font-size: 30px;
-       padding-bottom: 30px;
-       font-weight: 600;
-   }

@@ -1,0 +1,98 @@
+.parent_container_login{
+color: white;
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+}
+
+body{
+    background-color: #1a1c21;
+}
+.title_login h4{
+    margin-bottom: -1rem;
+    margin-top: 3rem;
+}
+.loginimage_logo{
+    display: flex;
+    width: 100%;
+    background-color:black;
+   
+
+}
+.divider{
+
+    border: 2px solid whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.inner_conter {
+    border: 1px solid whitesmoke;
+    margin: auto;
+    margin-top: 30px;
+}
+   
+ .inner_conter input{
+  background-color: rgb(53, 52, 52);
+  color: whitesmoke;
+  border-bottom: 2px solid rgb(77, 77, 77)
+
+ }
+
+ .inner_conter  label{
+  color: rgb(214, 208, 208);
+ }
+ @media screen and (min-width:350px) and (max-width:720px) {
+    .inner_conter {
+        border: 1px solid whitesmoke;
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .parent_container_login{
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        }
+        .loginimage_logo{
+            display: flex;
+            width: 100%;
+            background-color:black;
+            align-items: center;
+            justify-content: center;
+           
+        
+        }
+ }
+ @media screen and (min-width:720px) and (max-width:1600px) {
+    .inner_conter {
+        border: 1px solid whitesmoke;
+        width: 33%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .parent_container_login{
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        }
+        .loginimage_logo{
+            display: flex;
+            width: 100%;
+            background-color:black;
+            align-items: center;
+           
+           
+        
+        }
+ }
+ 
+

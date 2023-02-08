@@ -1,134 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body{
-background-color: #1a1c21;
-
-}
-
-.Image_container{
-    width: 73%;
-    
     background-color: #1a1c21;
-    padding: 5px;
-    margin-top: 20px;
-}
-.image_cont{
-    width: fit-content;
-    height: 400px;
-    border-radius:10px;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-            
-.bttom_btn:hover{
-    position: relative;
-    bottom: 0;
-   opacity: 0.9;
-   
-}
-
-/*      */
-
-.pADKZ6_kids {
-    position:absolute;
-    right: 119px;
-     bottom: -30px;
-    cursor: pointer;
-    background-color: yello;
- 
-   
-}
-.pADKZ6_kids div {
-    visibility: hidden;
-   
-}
-.pADKZ6_kids:hover div {
-    visibility: visible;
-   
-}
-
- .overlay_icons {
-    display: flex;
-    gap: 2px;   
-}
-.overlay_icons:hover{
-    visibility: visible;
-}
-
-
-.icons_ofshare {
-    width: 30px;
-    height: 34px;
-    object-fit: contain;
-    padding-left: 2px;
-    cursor: pointer;
-}
-
-.pre_col_2{
-    margin-top: 10px;
-}
-.pre_col_2 h1{
-    font-size: 28px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-
-@media screen and (min-width:300px) and (max-width:720px) {
-
-    .main{
-       
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 5px;
-        column-gap: 5px;
-        width: fit-content;
-        align-items: center;
-        margin: auto;
-        margin-top: 20px;
-        font-size: 15px;
-        height: 250px;
+    
     }
-    .content{
-       margin-bottom: 5px;
-    }
+    
     .Image_container{
-        font-size: 14px;
+        width: 73%;
+        
+        background-color: #1a1c21;
+        padding: 5px;
+        margin-top: 20px;
     }
-    .pre_col_2{
-        font-size: 14px;
-        display: flex;
+    .image_cont{
         width: fit-content;
+        height: 400px;
+        border-radius:10px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+                
+    /* .bttom_btn:hover{
+        position: relative;
+        bottom: 0;
+       opacity: 0.9;
+       
+    } */
+    
+
+    
+    /*      */
+    
+    .pADKZ6_kids {
+        position:absolute;
+        right: 119px;
+         bottom: -30px;
+        cursor: pointer;
+        background-color: yello;
+     
+       
+    }
+    .pADKZ6_kids div {
+        visibility: hidden;
+       
+    }
+    .pADKZ6_kids:hover div {
+        visibility: visible;
+       
+    }
+    
+     .overlay_icons {
+        display: flex;
+        gap: 2px;   
+    }
+    .overlay_icons:hover{
+        visibility: visible;
+    }
+    
+    
+    .icons_ofshare {
+        width: 30px;
+        height: 34px;
+        object-fit: contain;
+        padding-left: 2px;
+        cursor: pointer;
+    }
+    
+    .pre_col_2{
+        margin-top: 10px;
     }
     .pre_col_2 h1{
-        font-size: 14px;
+        font-size: 28px;
         display: flex;
-       
-    }
-
-    
-}
-@media screen and (min-width:720px) and (max-width:1020px) {
-
-    .main{
-       
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 5px;
-        column-gap: 5px;
-        width: fit-content;
-        align-items: center;
-        margin: auto;
-        margin-top: 20px;
-        font-size: 18px;
-        height: fit-content;
-
-
-    }
-    .pre_col_2{
-       
+        flex-wrap: wrap;
     }
     
-}
+    
+    
+    @media screen and (min-width:300px) and (max-width:720px) {
+    
+        .main{
+           
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 5px;
+            column-gap: 5px;
+            width: fit-content;
+            align-items: center;
+            margin: auto;
+            margin-top: 20px;
+            font-size: 15px;
+            height: 250px;
+        }
+        .content{
+           margin-bottom: 5px;
+        }
+        .Image_container{
+            font-size: 14px;
+        }
+        .pre_col_2{
+            font-size: 14px;
+            display: flex;
+            width: fit-content;
+        }
+        .pre_col_2 h1{
+            font-size: 14px;
+            display: flex;
+           
+        }
+    
+        
+    }
+    @media screen and (min-width:720px) and (max-width:1020px) {
+    
+        .main{
+           
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 5px;
+            column-gap: 5px;
+            width: fit-content;
+            align-items: center;
+            margin: auto;
+            margin-top: 20px;
+            font-size: 18px;
+            height: fit-content;
+    
+    
+        }
+        .pre_col_2{
+           
+        }
+        
+    }

@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import style from "./KIDS_css/Screen.css"
 import style2 from "./KIDS_css/premium.css"
 
-
-
 function Video() {
     let {data} =JSON.parse(localStorage.getItem("Clicked"))|| []
    
@@ -19,13 +17,13 @@ function Video() {
                 <img src={data.img} alt="" className="w-full h-4/6 flex items-center justify-center m-auto" />
             </div>
         </Link>
-        <div className='flex justify-between relative'>
+        <div className='flex justify-between relative Tittle_bar'>
             <div className=' flex text-white text-4xl gap-2 items-center'>
             <i class="fa-solid fa-crown text-2xl bg-sky-600 w-8 h-8 p-0 rounded-1 bg-hex flex justify-center"/>
-                <h1>{data.title}</h1>
+                <p className='text-base'>{data.title}</p>
                 <br />
             </div>
-            <div className='flex flex-wrap font-semibold items-center gap-2 text-gray-400'>
+            <div className='flex flex-wrap font-semibold items-center gap-2 text-gray-400 Share_button'>
                <div className=' flex items-center px-3 border text-gray-400 gap-2 '>
                     <i class="fa-solid fa-share-nodes"/>
                     <p>Share</p>
@@ -60,11 +58,10 @@ function Video() {
                     <p> Favorite</p>
                </div>
             </div> 
-            
         </div>
         <br />
-        <div className='flex justify-between  box-border'>
-            <div className='flex text-gray-400 gap-2 items-center'>
+        <div className='flex justify-between  box-border WatchNow_bottom '>
+            <div className='flex text-gray-400 gap-2 items-center '>
                 
                 <div className='h-2 w-2 rounded-2 bg-gray-400'></div>
                     <p>Kids</p>
@@ -81,9 +78,9 @@ function Video() {
             </div>
         </div>
         <br />
-        <div>
+        <div className='botton_watch_Now'>
            <Link to="/videopremium">
-           <div className=''>
+           <div className='watch_button'>
                 <button className='text-white flex px-2  py-1 gap-2 items-center  bg-sky-600 rounded-2 '><i class="fa-solid fa-play text-2xl  bg-sky-600"/> Watch Now</button>
             </div>
            </Link>

@@ -4,10 +4,13 @@ import styled from "@emotion/styled";
 import ShortVideo from "./Videos";
 import Icons from "./Icons";
 import './Short.css';
+import { Navbar } from "../LandingPage/navbar";
 const Short =() => {
     const [category_all, setCategory_all] = useState("category_opt_all");
     const [category_all2, setCategory_all2] = useState("category_opt_all2");
     return(
+       <>
+       <Navbar/>
         <div className="shorts_main">
             <div className="shorts_mainDiv">
                 <div className="shorts_letfBox_section">
@@ -170,6 +173,7 @@ const Short =() => {
             </div>
         </div>
     
+       </>
     )
 
 }

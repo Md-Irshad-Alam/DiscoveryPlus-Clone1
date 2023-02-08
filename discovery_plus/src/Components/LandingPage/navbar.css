@@ -1,0 +1,54 @@
+.navbar_main_container{
+    /* width: 100%; */
+   
+   /* overflow-y: hidden; */
+    
+    
+}
+.search_container input{
+    
+    overflow-y: hidden;
+}
+
+
+
+.loginbtn{
+   display: flex;
+    gap: 10px;
+    color: black;
+   
+}
+.username{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   width: 100px;
+
+}
+.search_itmes{
+  
+
+}
+.search_itmes img{
+    width: 100px;
+    height: 100px;
+
+
+
+}
+
+
+
+
+@media screen and (min-width:200px) and (max-width:720px) {
+    .navbar_main_container{
+        overflow-y: hidden;
+
+    }
+    .search_container {
+        width: 30%;
+        margin-right: 5px;
+    }
+}
+

@@ -1,53 +1,75 @@
 
-@media screen and (min-width:400px) and (max-width:720px) {
-    .Image_container{
-      
-        
-        padding: 5px;
-        margin-top: 20px;
+@media screen and (min-width:220px) and (max-width:420px) {
+    .Tittle_bar{
         display: flex;
-        flex-wrap: wrap;
-        text-align: center;
-        font-size: 12px;
-       
+        flex-direction: column;
+        margin-bottom: -30px;
+
     }
-    .image_cont{
-        width: fit-content;
-        height: fit-content;
-        border-radius:10px;
-        display: flex;
-        gap: 5px;
-        align-items: center;
-        flex-wrap: wrap;
-        font-size: 12px;
-       
-    }
-    .age_rating{
+    .Share_button{
+       /* background-color: rebeccapurple; */
+        color: red;
         display: flex;
         flex-direction: row;
-        text-align: left;
-        font-size: 12px;
-        flex-wrap: wrap;
+        padding: 10px;
+
+       
     }
-    .main_kids_container{
-        display: flex;
-        font-size: 12px;
-        
+    .WatchNow_bottom div{
+        background-color: red;
+        display: none;
     }
-    .col-4{
+    .WatchNow_bottom{
+        /* background-color: red; */
+        color: red;
+    }
+    .botton_watch_Now{
+        /* background-color: red; */
+    }
+    .watch_button{
+        background-color: red;
+        position: absolute;
+        top:15rem;
+        left: 60%;
+       
+
 
     }
     
+    
 }
-/* @media screen and (min-width:720px) and (max-width:1080px) {
-    .Image_container{
+@media screen and (min-width:420px) and (max-width:800px) {
+    .Tittle_bar{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -30px;
 
     }
-    /* .main_kids_container{
+    .Share_button{
+        color: red;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: red; */
-    /* } */
+        flex-direction: row;
+        padding: 10px;
 
-/* } */ 
+       
+    }
+    .WatchNow_bottom div{
+        background-color: red;
+        display: none;
+    }
+    .WatchNow_bottom{
+        /* background-color: red; */
+        color: red;
+    }
+    .botton_watch_Now{
+        /* background-color: red; */
+    }
+    .watch_button{
+        background-color: red;
+        position: absolute;
+        top:17.5rem;
+        left: 65%;
+       
+    }
+
+}

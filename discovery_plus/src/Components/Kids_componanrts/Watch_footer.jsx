@@ -19,19 +19,19 @@ function Watch_footer() {
   return (
     <div className= 'Watch_footer bg-plus_back'>
       
-      <div className='main bg-plus_back cursor-pointer'>
+      <div className='video_main_container bg-plus_back cursor-pointer'>
       {
         state.map((data)=>{
             return(
   
-                <div className='main_container card'>
+                <div className='vide_main_inner_cont '>
                    <Link to="/videopremium">
-                   <div className='inner_container'>
+                   <div className='Video_main_inner_cont'>
                     <img src={data.img} alt="img" className='w-fit h-fit'/>
-                       <div className="relative bottom-20 flex items-center justify-center">
-                       <i class="fa-regular fa-circle-play text-6xl  text-white bg-plus_back rounded-full"></i>
+                       <div className=" play_container">
+                       <i class="fa-regular fa-circle-play text-white bg-plus_back rounded-full"></i>
                        </div>
-                     <div className="content visible text-gray-300">
+                     <div className="hover_containt_video visible">
                      <h1>{data.title}</h1>
                       <p>{data.dis}</p>
                      </div>

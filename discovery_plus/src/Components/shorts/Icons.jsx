@@ -1,6 +1,9 @@
+import { Navbar } from '../LandingPage/navbar';
 import './Short.css';
 const Icons =() => {
     return(
+       <>
+        <Navbar/>
         <div className="video_sharing">
                                         <div className="sharing_opt">
                                             <div className="optionals">
@@ -62,6 +65,7 @@ const Icons =() => {
                                                 </div>
                                             </div>
                                     </div>
+       </>
     )
 }
 export default Icons;
