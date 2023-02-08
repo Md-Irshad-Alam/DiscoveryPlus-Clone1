@@ -60,6 +60,7 @@ function Video() {
                     <p> Favorite</p>
                </div>
             </div> 
+            
         </div>
         <br />
         <div className='flex justify-between  box-border'>
