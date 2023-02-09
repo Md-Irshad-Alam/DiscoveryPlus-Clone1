@@ -27,6 +27,7 @@ import Safe from "../Images/safe_kids.jpg";
 import Access from "../Images/get_access.jpeg"
 import "./premium.css"
 import { Navbar } from "../LandingPage/navbar";
+import { Link } from "react-router-dom";
 
 
 export const Premium=()=>{
@@ -60,6 +61,7 @@ export const Premium=()=>{
     return<>
   
     <div>
+        <Navbar/>
 
         <div className="premimum_ini">
     <div className="premi_background" style={{ backgroundImage:`url(${Premi_back})` }}> 
@@ -97,7 +99,7 @@ export const Premium=()=>{
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className="percentage_icon">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.085 19.34a10.262 10.262 0 0 0 5.702 1.729 10.274 10.274 0 0 0 10.262-10.262A10.262 10.262 0 1 0 5.085 19.34zm.496-16.324a9.37 9.37 0 0 1 5.205-1.579 9.38 9.38 0 0 1 9.37 9.37 9.37 9.37 0 1 1-14.575-7.79zm.973 6.886a2.306 2.306 0 1 0 2.562-3.835 2.306 2.306 0 0 0-2.562 3.835zM7.05 6.81A1.414 1.414 0 1 1 8.62 9.16a1.414 1.414 0 0 1-1.57-2.35zm6.688 9.383a2.306 2.306 0 1 1 0-4.613 2.306 2.306 0 0 1 0 4.613zm0-3.72a1.413 1.413 0 1 0 0 2.826 1.413 1.413 0 0 0 0-2.826zm-7 3.973a.446.446 0 0 0 .59-.106l8.11-10.519a.446.446 0 1 0-.706-.545L6.621 15.794a.446.446 0 0 0 .117.651z" fill="#9BA1A9"></path>
                 </svg>
-                    <h2 className="apply_voucher">Apply Voucher</h2>
+                   <Link to="/voucher"> <h2 className="apply_voucher">Apply Voucher</h2></Link>
             </div>
         </div>
 

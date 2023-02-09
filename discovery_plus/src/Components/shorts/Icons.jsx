@@ -3,7 +3,6 @@ import './Short.css';
 const Icons =() => {
     return(
        <>
-        <Navbar/>
         <div className="video_sharing">
                                         <div className="sharing_opt">
                                             <div className="optionals">

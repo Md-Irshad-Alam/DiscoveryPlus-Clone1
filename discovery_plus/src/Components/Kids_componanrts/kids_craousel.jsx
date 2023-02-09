@@ -40,17 +40,20 @@ const slider = [{
 
   return (
    
-    <div  className="main_kids_container" style={{ minWidth:"557px"}}>
+    <div  className="main_kids_container text-sm">
       <div id="carouselExampleCaptions" className="carousel slide " data-bs-ride="carousel" style={{ backgroundColor: "rgb(18,19,23)", padding: "4%", paddingTop: "0px", paddingBottom: "0px" }} >
         <div className="carousel-inner" style={{ padding: "3%" }}>
 
 
           <div className="carousel-item active first_image ">
-            <div className="row">
+            <div className="flex gap-2 w-fit h-fit">
 
               <div className="col-4">
-                <h1 className='non mt-3 text-white fs-1'  ><strong>{slider[0].title}</strong></h1>
-                 <p className="non card-text mb-0 py-1" style={{ color: "#838991", fontSize: "18px" }}>{slider[0]?.dis}</p>
+                <div className="flex flex-col">
+                  <p className=' text-white text-xl'  ><strong>{slider[0].title}</strong></p>
+                 
+                 <p className="text-gray-500 text-xl title_main ">{slider[0]?.dis}</p>
+                </div>
                 <div className="non btn-group mt-3" role="group" aria-label="Basic example">
                   <button type="button" className="btn btn-secondary btn-sm py-0 mx-1" style={{ backgroundColor: "rgb(40,46,61)", color: "#b6bbc0", fontSize: "12px",maxWidth:"120px"}}>Trending</button>
                   <button type="button" className="btn btn-secondary btn-sm py-0 mx-1" style={{ backgroundColor: "rgb(40,46,61)", color: "#b6bbc0", fontSize: "12px",maxWidth:"120px" }}>Recommanded</button>
@@ -69,7 +72,7 @@ const slider = [{
 
               <div className="col-12 col-lg-8">
               <Link to="/watch" style={{textDecoration:"none"}}>
-                  <img style={{ borderRadius: "10px" }} src={slider[0].img} className="d-block w-100" alt="..."  onClick={() => {
+                  <img style={{ borderRadius: "10px" }} src={slider[0].img} classname="w-fit h-fit" alt="..."  onClick={() => {
                          localStorage.setItem("Clicked", JSON.stringify(slider[0]));
                       }}/>
                 </Link>
@@ -78,7 +81,7 @@ const slider = [{
           </div>
 
           <div className="carousel-item">
-            <div className="row">
+            <div className="flex gap-2">
               <div className="col-4">
                 <h1 className='non mt-3 text-white fs-1'> <strong>{slider[1].title}</strong></h1>
                 <p className="non card-text mb-0 py-1" style={{ color: "#838991", fontSize: "18px" }}>{slider[0]?.dis}</p>
@@ -87,8 +90,8 @@ const slider = [{
                   <button type="button" className="btn btn-secondary btn-sm py-0 mx-1 btn-sm" style={{ backgroundColor: "rgb(40,46,61)", color: "#b6bbc0", fontSize: "12px" ,maxWidth:"120px"}}>Recommanded</button>
                 </div>
                 <Link to="videopremium" style={{textDecoration:"none"}}>
-                  <div className='pt-4 flex items-center gap-2'>
-                  <i class="fa-regular fa-circle-play w-10 h-10 text-5xl "/><span className='px-3' style={{ color: "#ffffff", fontSize: "18px" }}
+                  <div className='pt-4 flex items-center gap-2 absolute '>
+                  <i class="fa-regular fa-circle-play w-10 h-10 text-5xl "/><span  style={{ color: "#ffffff", fontSize: "18px" }}
                       onClick={() => {
                         localStorage.setItem("Clicked", JSON.stringify(slider[1]));
                       }}>Play</span>
@@ -98,7 +101,7 @@ const slider = [{
 
               <div className="col-12 col-lg-8">
                 <Link to="./videopremium" style={{textDecoration:"none"}}>
-                  <img style={{ borderRadius: "10px" }} src={slider[1].img} className="d-block w-100" alt="..."  onClick={() => {
+                  <img style={{ borderRadius: "10px" }} src={slider[1].img} classname="w-fit h-fit" alt="..."  onClick={() => {
                       localStorage.setItem("Clicked", JSON.stringify(slider[1]));
                       }}/>
 
@@ -110,7 +113,7 @@ const slider = [{
           </div>
 
           <div className="carousel-item">
-            <div className="row">
+            <div className="flex gap-2">
               <div className="col-4">
                 <h1 className='non mt-3 text-white fs-1'> <strong>{slider[2].title}</strong></h1>
                 <p className="non card-text mb-0 py-1" style={{ color: "#838991", fontSize: "18px" }}>{slider[0]?.dis}</p>
@@ -120,7 +123,7 @@ const slider = [{
                 </div>
                 <Link to="./videopremium" style={{textDecoration:"none"}}>
                   <div className='pt-4 flex items-center gap-2'>
-                  <i class="fa-regular fa-circle-play w-10 h-10 text-5xl "/><span className='px-3' style={{ color: "#ffffff", fontSize: "18px" }}
+                  <i class="fa-regular fa-circle-play w-10 h-10 text-5xl "/><span  style={{ color: "#ffffff", fontSize: "18px" }}
                       onClick={() => {
                         localStorage.setItem("Clicked", JSON.stringify(slider[2]));
                       }}>Play</span>
@@ -130,7 +133,7 @@ const slider = [{
               </div>
               <div className="col-12 col-lg-8">
                 <Link to="./videopremium" style={{textDecoration:"none"}}>
-                  <img style={{ borderRadius: "10px" }} src={slider[2]?.img} className="d-block w-100" alt="..."  onClick={() => {
+                  <img style={{ borderRadius: "10px" }} src={slider[2]?.img} classname="w-fit h-fit" alt="..."  onClick={() => {
                       localStorage.setItem("Clicked", JSON.stringify(slider[2]));
                       }}/>
                 </Link>
@@ -140,7 +143,7 @@ const slider = [{
           </div>
 
           <div className="carousel-item">
-            <div className="row">
+            <div className="flex gap-2">
               <div className="col-4">
                 <h1 className='non mt-3 text-white fs-1'> <strong>{slider[3]?.title}</strong></h1>
                 <p className="non card-text mb-0 py-1" style={{ color: "#838991", fontSize: "18px" }}>{slider[3]?.dis}</p>
@@ -151,7 +154,7 @@ const slider = [{
                 <Link to="/watch" style={{textDecoration:"none"}}>
                   <div className='pt-4 flex items-center gap-2'>
 
-                  <i class="fa-regular fa-circle-play w-10 h-10 text-5xl "/><span className='px-3' style={{ color: "#ffffff", fontSize: "18px", textAlign:"center" }}
+                  <i class="fa-regular fa-circle-play w-10 h-10 text-5xl "/><span  style={{ color: "#ffffff", fontSize: "18px", textAlign:"center" }}
                       onClick={() => {
                         localStorage.setItem("Clicked", JSON.stringify(slider[3]));
                       }}>Play</span>
@@ -160,7 +163,7 @@ const slider = [{
               </div>
               <div className="col-12 col-lg-8">
                 <Link to="/watch" style={{textDecoration:"none"}}>
-                  <img style={{ borderRadius: "10px" }} src={slider[3]?.img} className="d-block w-100" alt="..."  onClick={() => {
+                  <img style={{ borderRadius: "10px" }} src={slider[3]?.img} classname="w-fit h-fit" alt="..."  onClick={() => {
                         localStorage.setItem("Clicked", JSON.stringify(slider[3]));
                       }}/>
 
@@ -169,7 +172,7 @@ const slider = [{
             </div>
           </div>
         </div>
-        <div className='row p-4'>
+        <div className='flex gap-2 p-4'>
           <div className="carousel-indicators col-2 mx-0" >
             <button style={{ maxWidth: "10px", height: "10px", borderRadius: "50%" }} type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active dot" aria-current="true" aria-label="Slide 1"></button>
             <button className='dot' style={{ maxWidth: "10px", height: "10px", borderRadius: "50%" }} type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>

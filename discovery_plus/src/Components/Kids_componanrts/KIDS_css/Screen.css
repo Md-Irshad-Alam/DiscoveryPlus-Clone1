@@ -1,3 +1,23 @@
+  .slider_right_part{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    
+}
+
+
+
+.carousel-indicators div{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+}
 
 @media screen and (min-width:220px) and (max-width:420px) {
     .Tittle_bar{
@@ -5,6 +25,18 @@
         flex-direction: column;
         margin-bottom: -30px;
 
+    }
+       .slider_left_part{
+        background: red;
+    }
+    .slider_right_part{
+        background: white;
+    }
+    .slider_play_btn{
+        background: yellow;
+    }
+    .tranding_button{
+        background-color: gray;
     }
     .Share_button{
        /* background-color: rebeccapurple; */
@@ -23,8 +55,10 @@
         /* background-color: red; */
         color: red;
     }
-    .botton_watch_Now{
-        /* background-color: red; */
+    .play_btn_slider{
+        background-color: red;
+        color: red;
+        
     }
     .watch_button{
         background-color: red;
@@ -70,6 +104,48 @@
         top:17.5rem;
         left: 65%;
        
+    }
+
+    .slider_itmem_main{
+       
+       
+
+    }
+    .slider_left_part{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+    
+      
+    }
+    .slider_left_part >div{
+        font-size: 2px;
+        color: red;
+        
+         
+       }
+    .slider_right_part{
+        width: 100%;
+    }
+    .slider_play_btn{
+        
+       
+    }
+    .slider_play_btn {
+        
+       position: absolute;
+       left: 6cm;
+     
+     
+    }
+    .tranding_button{
+        position: absolute;
+       left: 10cm;
+      
+
     }
 
 }

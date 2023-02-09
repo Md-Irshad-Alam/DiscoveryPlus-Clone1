@@ -93,7 +93,7 @@ export const StreamForFree=()=>{
                         slider.map((e) => (
                             <div className="col col-4  g-3 col-lg-2 col-xl-2" key={e.id} >
                                 <div className="card" style={{border:"none" }}>
-                                    <img style={{borderRadius: "5px",height:"250px"}} src={e.img} classname="img-fluid" alt="" />
+                                    <img style={{borderRadius: "5px"}} src={e.img} classname="img-fluid" alt="" />
                                     {/* <p >{e.text}</p> */}
                                     <div className="overlay1" style={{ padding: "1%" }}>
                                     <img className='centered' src={play} alt="" style={{ maxwidth: "45px", maxHeight: "45px" }} />

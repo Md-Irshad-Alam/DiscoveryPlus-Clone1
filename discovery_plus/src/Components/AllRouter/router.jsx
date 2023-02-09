@@ -14,29 +14,26 @@ import LoginForm from '../Login&Signup/LoginForm'
 import Login from '../Login&Signup/Login'
 import { AuthContextProvider } from '../Context/context'
 import { Navbar } from '../LandingPage/navbar'
-
-
+import Voucher from '../Primium/Voucher'
 function AllRouter() {
   return (
     <div >
-      <AuthContextProvider>
-     
+      
       <Routes>
-        
          <Route path="" element={<Home/>}/>
-       
+
         <Route path="/home" element={<Home/>}/> 
          <Route path='/explore's element={<Explore/>}/>
          <Route path='/Shows_You_Love's element={<ShowYouLove/>}/>
+         
         <Route path='/kids' element={<Kids/>} />
+        <Route path='/voucher' element={<Voucher/>} />
         <Route path='/watch' element={<Watch/>}/>
+        <Route path='/shorts' element={<Short/>}/>
         < Route path='videopremium' element={<Video_prem/>}/>
         < Route path='/premium' element={<Premium/>}/> 
-        <Route path='/shorts' element={<Short/>}/>
         <Route path='*' element={<div>Not Found</div>}/> 
       </Routes>
-      
-      </AuthContextProvider>
     </div>
   )
 }

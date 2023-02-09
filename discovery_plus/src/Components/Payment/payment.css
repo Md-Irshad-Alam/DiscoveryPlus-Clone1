@@ -1,60 +1,68 @@
+.payment_image_part{
+        width: 100%;
+        box-shadow: rgba(47, 49, 51, 0.2) 0px 8px 24px;
+        margin-bottom: 5rem;
+     
+}
+.payment_image_part img{
+    width: 250px;
 
-.firstpart{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    margin-top: 6%;
-}
-.firstpart>form>input{
-    height: 30px;
-    width: 200px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #121317;
-    border: 1px solid #383e47;
-    color: white;
-    
-}
-.secondpart{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1%;
-}
-.secondpart>input{
-    background-color: #121317;
-    border: 1px solid #383e47;
-    color: white;
-    margin-top: 20px;
-    height: 30px;
-    width: 95px;
-    text-align: center;
-    border-radius: 10px;
-    
 }
 
-p{
-    font-weight: bolder;
-    color: white;
+.t_1{
+    color: #383e47;
 }
-h1{
-    color: white;
-}
-.main{
-    background-color: #121317;
-    border: 1px  ;
+.Payment_inner_cnt{
+    display: flex;
     padding: 10px;
-    width: 400px;
+    background-color: #18212d;
+    width: 350px;
+    border-bottom: 2px solid rgb(203, 203, 204);
     margin: auto;
+    margin-top: 7rem;
+    text-align: center;
 }
-.submit{
-    width: 60%;
+.p_9{
+    color: white;
+    font-weight: bolder;
+}
+.p_11 input{
+    width: 100%;
+    padding: 3px;
+    border-bottom: 2px solid rgb(203, 203, 204);
+    background-color: rgb(44, 43, 43);
+    color: white;
+    font-weight: bolder;
+}
+.p_12 input{
+    width: 100%;
+    padding: 3px;
+    border-bottom: 2px solid rgb(203, 203, 204);
+    background-color: rgb(44, 43, 43);
+    color: white;
+    font-weight: bolder;
+}
+.p_13 input{
+    margin-right: 15px;
+    width: 45%;
+    padding: 3px;
+    border-bottom: 2px solid rgb(203, 203, 204);
+    background-color: rgb(44, 43, 43);
+    color: white;
+    font-weight: bolder;
+}
+.p_14{
+   
     font-weight: bolder;
     color: white;
-    background-color: #121317;
+    background-color: #3999f4;
     border-radius: 10px;
-    height: 35px;
+    font-size: 1rem;
     text-align: center;
     border: 1px solid #383e47;
+    width: 70%;
+    margin: auto;
+    padding: 5px;
+   
     
 }

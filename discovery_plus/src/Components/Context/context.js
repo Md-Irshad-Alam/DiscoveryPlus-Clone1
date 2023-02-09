@@ -28,17 +28,11 @@ export function AuthContextProvider({children}) {
 
             localStorage.setItem('auth-token', token);
             let gettoken = localStorage.getItem('auth-token');
-            if(gettoken===token){
-                window.alert("user already login")
-            }else{
-                window.alert("login Successful")
-            }
-            console.log(gettoken)
-           
+           window.alert("login success")
             history('/home')
         })
         .catch(err => {
-            toast('Login failed', {
+            window.alert("Invalid input", {
                 type: 'error'
             })
         })

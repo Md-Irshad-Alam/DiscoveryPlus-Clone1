@@ -44,8 +44,9 @@ const slider = [{
     <div style={{ backgroundColor: "rgb(18,19,23)", padding: "4%", paddingTop: "0px", paddingBottom: "0px" }}>
       <div id="carouselExampleCaptions" className="carousel slide " data-bs-ride="carousel" style={{ backgroundColor: "rgb(18,19,23)", padding: "4%", paddingTop: "0px", paddingBottom: "0px" }} >
         <div className="carousel-inner" style={{ padding: "3%" }}>
+
           <div className="carousel-item active">
-            <div className="row">
+            <div className="flex gap-2 text-lg">
               <div className="col-4">
                 <h1 className='non mt-3 text-white fs-1'  ><strong>{slider[0].title}</strong></h1>
                  <p className="non card-text mb-0 py-1" style={{ color: "#838991", fontSize: "18px" }}>{slider[0]?.description}</p>
@@ -56,7 +57,7 @@ const slider = [{
                 <Link to="/watch" style={{textDecoration:"none"}}>
                   <div className='pt-4'>
 
-                    <img className='play' src={play} alt="" style={{ maxWidth: "65px", maxHeight: "65px" }} /><span className='px-3' style={{ color: "#ffffff", fontSize: "18px" }}
+                    <img className='play' src={play} alt="" style={{ maxWidth: "3rem", maxHeight: "3rem" }} /><span className='px-3' style={{ color: "#ffffff", fontSize: "18px" }}
                       onClick={() => {
                         localStorage.setItem("showData", JSON.stringify(slider[0]));
                       }}>Play</span>
@@ -72,7 +73,7 @@ const slider = [{
             </div>
           </div>
           <div className="carousel-item">
-            <div className="row">
+            <div className="flex gap-2 text-lg">
               <div className="col-4">
                 <h1 className='non mt-3 text-white fs-1'> <strong>{slider[1].title}</strong></h1>
                 <p className="non card-text mb-0 py-1" style={{ color: "#838991", fontSize: "18px" }}>{slider[0]?.description}</p>
@@ -103,7 +104,7 @@ const slider = [{
           </div>
 
           <div className="carousel-item">
-            <div className="row">
+            <div className="flex gap-2 text-lg">
               <div className="col-4">
                 <h1 className='non mt-3 text-white fs-1'> <strong>{slider[2].title}</strong></h1>
                 <p className="non card-text mb-0 py-1" style={{ color: "#838991", fontSize: "18px" }}>{slider[0]?.description}</p>
@@ -133,7 +134,7 @@ const slider = [{
           </div>
 
           <div className="carousel-item">
-            <div className="row">
+            <div className="flex gap-2 text-lg">
               <div className="col-4">
                 <h1 className='non mt-3 text-white fs-1'> <strong>{slider[3]?.title}</strong></h1>
                 <p className="non card-text mb-0 py-1" style={{ color: "#838991", fontSize: "18px" }}>{slider[3]?.description}</p>
@@ -162,7 +163,7 @@ const slider = [{
             </div>
           </div>
         </div>
-        <div className='row p-4'>
+        <div className='flex gap-2 text-lg p-4'>
           <div className="carousel-indicators col-2 mx-0" >
             <button style={{ maxWidth: "10px", height: "10px", borderRadius: "50%" }} type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active dot" aria-current="true" aria-label="Slide 1"></button>
             <button className='dot' style={{ maxWidth: "10px", height: "10px", borderRadius: "50%" }} type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>

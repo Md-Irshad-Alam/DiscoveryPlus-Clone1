@@ -1,12 +1,12 @@
+/* 
 
 .slideshow {
   max-width: 70.2vw;
   overflow: hidden;
- 
 }
 
 .slideshowSlider {
-  transition: ease 10000ms;
+  transition: ease 1000ms;
   display: flex;
 }
 
@@ -15,6 +15,7 @@
   height: auto;
 }
 
+/* Buttons */
 
 .slideshowDots {
   text-align: center;
@@ -48,7 +49,7 @@
     border-radius: 6px;
     max-width: 70vw;
 }
- .thsd_text {
+.thsd_text {
     width: 20vw;
     margin-right: 80px;
     display: flex;
@@ -87,4 +88,5 @@
     object-position: center top;
     border-radius: 6px;
     width: 100%;
-} 
+}
+ */

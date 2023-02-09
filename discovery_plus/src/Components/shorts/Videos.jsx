@@ -15,8 +15,7 @@ const ShortVideo = () => {
     },
   ]
   return(
-        <Player fluid={false} width="100%" height={1000} autoPlay disableDefaultControls={true}
-                          poster="/assets/poster.png"
+        <Player fluid={false} width="400px" height="335px" autoPlay disableDefaultControls={false}
                           src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
                         >
         </Player>                      

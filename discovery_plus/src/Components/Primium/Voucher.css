@@ -1,0 +1,66 @@
+.image_part{
+   width: 100%;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   margin-bottom: 5rem;
+
+}
+.image_part img{
+    width: 350px;
+
+}
+
+.voucher_container{
+    width: 350px;
+    padding: 10px;
+    margin: auto;
+    text-align:center;
+    color: white;
+}
+.v_10{
+    border: 2px solid rgb(51, 49, 49);
+    padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.v_11{
+margin-bottom: 10px;
+font-size: larger;
+}
+.v_12{
+    margin-top: 10px;
+    width: 100%;
+    font-size: small;
+
+}
+.v_1{
+    color: rgb(78, 77, 77);
+    font-weight: bold;
+    font-size: small;
+}
+.v_2{
+    color: rgb(42, 73, 63);
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    
+}
+.v_2:hover{
+    color: red;
+    font-style: normal;
+}
+.v_12 input{
+    width: 100%;
+    padding: 5px;
+    border-bottom: 2px solid rgb(203, 203, 204);
+    background-color: rgb(44, 43, 43);
+    color: white;
+    font-weight: bolder;
+}
+.v_12 >p{
+    color: rgb(159, 157, 157);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+btn_pay{
+    color: rgb(11, 11, 11);
+    background-color: teal;
+}
