@@ -65,7 +65,7 @@ export const Footer = () => {
     return (
         <Footercss>
             <div id="footer" className="logos mt-0">
-                <div id="top_content" className="flex_wrapper">
+                <div id="top_content" className="flex_wrapper mt-3">
                     <div className="top_left" >
                         <div className="flex_wrapper">
                             <img className="logos" src="mail.png" />

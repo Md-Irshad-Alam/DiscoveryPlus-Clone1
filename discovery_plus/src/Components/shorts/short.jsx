@@ -3,20 +3,19 @@ import { useState } from "react";
 import styled from "@emotion/styled";
 import ShortVideo from "./Videos";
 import Icons from "./Icons";
-// import './Short.css';
+import './Short.css';
 import { Navbar } from "../LandingPage/navbar";
-
-export default function Video_Short(){
+const Short =() => {
     const [category_all, setCategory_all] = useState("category_opt_all");
-    const [category_all2, setCategory_all2] = useState();
+    const [category_all2, setCategory_all2] = useState("category_opt_all2");
     return(
-        <>
+       <>
        <Navbar/>
         <div className="shorts_main">
             <div className="shorts_mainDiv">
                 <div className="shorts_letfBox_section">
-                    <div className="category_cntnt">
-                        <div>
+                    <div className="category_inner_div">
+                        <div className="Content_div">
                             <div className="category_heading">
                                 <span className="category_heading_span">Categories wise</span>
                             </div>
@@ -24,9 +23,10 @@ export default function Video_Short(){
                                 <div className="subcateg_line"></div>
                             </div>
                         </div>
-                        <div>
+
+                        <div className="Content_div">
                             <button className="button_categ">
-                                <div className="sub_categ" id="#category">
+                                <div className="sub_categ" >
                                     <span className={category_all} id="highlight">All</span>
                                 </div>
                                 <div className="categ_line">
@@ -34,9 +34,10 @@ export default function Video_Short(){
                                 </div>
                             </button> 
                         </div>
-                        <div>
+
+                        <div className="Content_div">
                             <button className="button_categ">
-                                <div className="sub_categ" id="#category">
+                                <div className="sub_categ" >
                                     <span className={category_all}>Adventure</span>
                                 </div>
                                 <div className="categ_line">
@@ -44,9 +45,9 @@ export default function Video_Short(){
                                 </div>
                             </button> 
                         </div>  
-                        <div>
+                        <div className="Content_div">
                             <button className="button_categ">
-                                <div className="sub_categ" id="#category">
+                                <div className="sub_categ" >
                                     <span className={category_all}>Food</span>
                                 </div>
                                 <div className="categ_line">
@@ -54,9 +55,9 @@ export default function Video_Short(){
                                 </div>
                             </button> 
                         </div>
-                        <div>
+                        <div className="Content_div">
                             <button className="button_categ">
-                                <div className="sub_categ" id="#category">
+                                <div className="sub_categ" >
                                     <span className={category_all}>Science</span>
                                 </div>
                                 <div className="categ_line">
@@ -64,9 +65,9 @@ export default function Video_Short(){
                                 </div>
                             </button> 
                         </div>
-                        <div>
+                        <div className="Content_div">
                             <button className="button_categ">
-                                <div className="sub_categ" id="#category">
+                                <div className="sub_categ" >
                                     <span className={category_all}>Animals</span>
                                 </div>
                                 <div className="categ_line">
@@ -74,9 +75,9 @@ export default function Video_Short(){
                                 </div>
                             </button> 
                         </div>
-                        <div>
+                        <div className="Content_div">
                             <button className="button_categ">
-                                <div className="sub_categ" id="#category">
+                                <div className="sub_categ" >
                                     <span className={category_all}>Lifestyle</span>
                                 </div>
                                 <div className="categ_line">
@@ -87,85 +88,62 @@ export default function Video_Short(){
                     </div>
                 </div>
 
-             <div className="shorts_middle_section">
-                    <div className="Video_wraper_container">
-                        <div className="video_inner_wrapper">
+                <div className="shorts_middle_section">
+                        <div className="content_shorts">
 
-                            <div className="title_wraper">
-                                <div id="videoTitle">
-                                    <h4 className="video_title">5 Full Facts about Daily Inventions</h4>
-                                </div>
-                                <br />
-                                <div className="blank_space">
-                                    <p><span>Age Rating: UA-16+ | Contains: Frightening Scenes . Smoking</span></p>
+                        <div className="content_shorts">
+                                <div className="video_wrapper2">
+                                    <div id="videoTitle">
+                                        <h4 className="video_title">Is Earth in Danger?</h4>
+                                    </div>
+                                    <div className="blank_space">
+                                        <div>Age Rating : UA-16+ | Contains : Foul Language Smoking Alcohol</div>   
+                                    </div>
+                                    <div className="videoShow1">
+                                        <ShortVideo/>
+                                    </div>
+                                    <Icons/>
                                 </div>
                             </div>
-                            <div className="videoShow">
-                               <ShortVideo/>
-                            </div>
-                                <Icons/>
-                        </div>
-                    </div>
-                    <div className="Video_wraper_container">
-                        <div className="video_inner_wrapper">
 
-                            <div className="title_wraper">
-                                <div id="videoTitle">
-                                    <h4 className="video_title">5 Full Facts about Daily Inventions</h4>
-                                </div>
-                                <br />
-                                <div className="blank_space">
-                                    <p><span>Age Rating: UA-16+ | Contains: Frightening Scenes . Smoking</span></p>
+                            <div className="content_shorts">
+                                <div className="video_wrapper2">
+                                    <div id="videoTitle">
+                                        <h4 className="video_title">Is Earth in Danger?</h4>
+                                    </div>
+                                    <div className="blank_space">
+                                        <div>Age Rating : UA-16+ | Contains : Foul Language Smoking Alcohol</div>   
+                                    </div>
+                                    <div className="videoShow1">
+                                        <ShortVideo/>
+                                    </div>
+                                    <Icons/>
                                 </div>
                             </div>
-                            <div className="videoShow">
-                               <ShortVideo/>
-                            </div>
-                                <Icons/>
-                        </div>
-                    </div>
-                    <div className="Video_wraper_container">
-                        <div className="video_inner_wrapper">
 
-                            <div className="title_wraper">
-                                <div id="videoTitle">
-                                    <h4 className="video_title">5 Full Facts about Daily Inventions</h4>
-                                </div>
-                                <br />
-                                <div className="blank_space">
-                                    <p><span>Age Rating: UA-16+ | Contains: Frightening Scenes . Smoking</span></p>
-                                </div>
-                            </div>
-                            <div className="videoShow">
-                               <ShortVideo/>
-                            </div>
-                                <Icons/>
-                        </div>
-                    </div>
-                    <div className="Video_wraper_container">
-                        <div className="video_inner_wrapper">
-
-                            <div className="title_wraper">
-                                <div id="videoTitle">
-                                    <h4 className="video_title">5 Full Facts about Daily Inventions</h4>
-                                </div>
-                                <br />
-                                <div className="blank_space">
-                                    <p><span>Age Rating: UA-16+ | Contains: Frightening Scenes . Smoking</span></p>
+                            <div className="content_shorts">
+                                <div className="video_wrapper3">
+                                        <div id="videoTitle">
+                                            <h4 className="video_title">5 Full Facts about Daily Inventions</h4>
+                                        </div>
+                                        <div className="blank_space">
+                                            <div>Age Rating : U</div>
+                                        </div>
+                                        <div className="videoShow1">
+                                            <ShortVideo/>
+                                        </div>
+                                        <Icons/>
                                 </div>
                             </div>
-                            <div className="videoShow">
-                               <ShortVideo/>
-                            </div>
-                                <Icons/>
                         </div>
                     </div>
                 </div>
-                
+
                 <div className="shorts_rightBox_section">
                     <div className="discov_Ad">
                         <img src="https://www.discoveryplus.in/bebbe161445c85cd0ab9ff57918ae2cd.png" className="ad_image" />
-                        <div className="ad_content">
+
+                    <div className="ad_content">
                         <div className="style_textContainer">
                             <span className="text_contain">Watch discovery+ Shorts while traveling.</span>
                         </div>
@@ -196,7 +174,8 @@ export default function Video_Short(){
 
 
             </div>
-        </div>
-        </>
+       </>
     )
+
 }
+export default Short;

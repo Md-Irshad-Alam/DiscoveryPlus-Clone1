@@ -7,14 +7,6 @@
     color: black;
    
 }
-/* .username{
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
-   width: 100px;
- */
-/* } */
 
 .navbar_main_container{
 width: auto;
@@ -51,6 +43,7 @@ font-size: 1rem;
 
 .search_list{
     position: absolute;
+    z-index: 999;
     top: 59px;
     height: 200px;
     width: 250px;

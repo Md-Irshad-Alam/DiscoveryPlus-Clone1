@@ -47,7 +47,7 @@ return function (...args){
 const handlechange = async (e) => {
  const {value}=e.target
 
- // setSearch(value);
+ console.log(value)
  const result = await fetch(`https://testapi-7cxh.onrender.com/Watching?q=${value}`);
  const out = await result.json();
  setDatas(out);
@@ -84,7 +84,7 @@ return (
        <ChakraProvider >
          <Flex bg="black" alignItems="center" h="60px"gap={7} justifyContent={"center"} >
             <Box display="flex" gap={4} >
-            <Image w="200px" alt="discovery Logo" src="https:www.discoveryplus.in/129c5de772422db12a69e397768bd8ec.png" />
+            <Image w="200px" alt="discovery Logo" src="./login_logo.png" />
          
          </Box>
         
@@ -103,7 +103,7 @@ return (
       
         <div className="search_main_container">
                 <div className="search_input">
-                    <input placeholder="Search for a show, etc" w={'330px'} onChange={debounce(handlechange)}/>
+                    <input placeholder="Search for a show, etc" w={'330px'} onChange={debounce(handlechange)} onkeyup={debounce}/>
                 </div>
               
              <div className="outter_serrch_container">
