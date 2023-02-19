@@ -28,6 +28,8 @@ export function AuthContextProvider({children}) {
 
             localStorage.setItem('auth-token', token);
             let gettoken = localStorage.getItem('auth-token');
+            
+            // console.log(gettoken)
            window.alert("login success")
             history('/home')
         })
@@ -47,9 +49,8 @@ export function AuthContextProvider({children}) {
     useEffect(() => {
         getLoggedInUser()
         .then(response => {
-            const user = response.data.data;
-
-            setUser(user);
+            const {name, email, password} = response.data.data;
+            console.log(name, email)
         })
     }, [showLoginForm])
 

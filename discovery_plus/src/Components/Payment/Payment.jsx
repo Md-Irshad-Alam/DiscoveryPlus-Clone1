@@ -5,30 +5,32 @@ import "./payment.css"
 import {useState} from 'react'
 
 import { useNavigate } from 'react-router-dom'
+import { Hidden } from '@mui/material'
 const Payment = () => {
   let data = localStorage.getItem("applied_price");
-  const [inputdata, setdata] = useState([{
-    
-      name:'',
-      number:'',
-      data:'',
-      cvv:'',
-    
-  }])
+  const [inputdata, setdata] = useState([])
+  const [val , setval] = useState([]);
   let history = useNavigate();
   const [load, setloging]  = useState('true')
-  console.log(inputdata)
 
 
-  function lodingwheel(callback){
-    
-    setTimeout(function(){
+  const handleinput = (e)=>{
+   setdata({...inputdata, [e.target.name]:e.target.value}); 
+  
+  }
+ 
+  function lodingwheel(count){
+    setval(inputdata);
+ 
+    if(val.length >0){
+      window.alert("payment faild")
+    }else{
       window.alert("payment Success")
       history('/home')
-        callback();
-    },3000)
-   
-   }
+    }
+
+    }
+    
   return (
 
  <div>
@@ -37,29 +39,29 @@ const Payment = () => {
       </div>
       
 
-   <form action="">
+ 
    <div className="Payment_inner_cnt">
         <div className="p_10">
         <div className='p_9'>
          
         <h1 className='text-xl '>Payment Details</h1>
         <div>
-         <span className='t_1'>Payable Amount is:- Rs.{data} </span>
+         <p className='t_1'>Payable Amount is:- <span className='t_02'>Rs.{data}</span> </p>
         </div>
         </div>
         <Divider padding="1px" marginTop="10px" background="ghostwhite"/>
         <br />
           <div className='p_11'>
-            <input type="text" placeholder='Your Name' name='name'  onChange={(e)=> setdata(e.target.value)} required/>
+            <input type="text" placeholder='Your Name' name='name'  onChange={handleinput} required />
           </div>
           <br />
           <div className="p_12">
-            <input type="number"  placeholder='Enter Card Number' name='number' onChange={(e)=> setdata(e.target.value)} required/>
+            <input type="number"  placeholder='Enter Card Number' name='number' onChange={handleinput} required/>
           </div>
           <br />
         <div className='p_13'>
-            <input type="date" placeholder="Expiry Year" id="expiry" name="data" onChange={(e)=> setdata(e.target.value)}required/>
-            <input type='password' placeholder="CVV" id="cvv"name='cvv' onChange={(e)=> setdata(e.target.value)} required/>
+            <input type="date" placeholder="Expiry Year" id="expiry" name="data" required/>
+            <input type='password' placeholder="CVV" id="cvv"name='cvv'  required/>
         </div>
 
         <br></br>
@@ -70,7 +72,6 @@ const Payment = () => {
           
         </div>
     </div>
-   </form>
  </div>
   
   

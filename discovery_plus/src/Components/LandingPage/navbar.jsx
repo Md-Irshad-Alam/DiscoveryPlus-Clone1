@@ -31,7 +31,7 @@ export const Navbar= ({ children }) => {
  const [show, setshow]  = useState("login");
  const [data, setdata] = useState([]);
  const [datas, setDatas] = useState([]);
-
+console.log(user +"this is from the navbar");
 const debounce = (calback)=>{
 let timmer;
 return function (...args){
