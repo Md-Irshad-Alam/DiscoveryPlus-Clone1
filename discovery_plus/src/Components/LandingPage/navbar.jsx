@@ -1,21 +1,17 @@
 import { Search2Icon } from "@chakra-ui/icons";
-import {Flex,Box,Spacer, Image,Input,InputGroup,InputRightElement, Center, Button, ChakraBaseProvider, ChakraProvider, Divider} from "@chakra-ui/react";
+import {Flex,Box,Spacer, Image,Center, Button, ChakraProvider,} from "@chakra-ui/react";
 import {json, Link} from "react-router-dom"
 import syle from './navbar.css'
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import {useState, useEffect} from 'react'
 import Login from "../Login&Signup/Login";
 import RegisterForm from "../Login&Signup/RegisterForm";
 import { useNavigate } from "react-router-dom";
-import { Hidden } from "@mui/material";
-import Container from "@mui/material/Container";
 import React, { useContext } from "react";
 import AuthContext from "../Context/context";
 import LoginForm from "../Login&Signup/LoginForm";
-import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
-import MenuItem from "@mui/material/MenuItem";
 import config from "../../config/config";
+
 
 
 
@@ -58,7 +54,7 @@ const handlechange = async (e) => {
 
 let username = ''
  const hidelogin = () => {
-   setshow(true)
+   setshow("register")
    if(user==null){
      window.location.reload();
     }else{
@@ -127,10 +123,11 @@ return (
              
             
               <Button onClick={()=>{
-               setshow(show==="login"? history('/login') : history('/register'))
+               setshow(show==="login"? history('/login') :history('/register') )
 
               }} margin="10px"> {show==="login" ? "Login": "Log Out"}</Button>
-           
+
+              
         <div  className="BuyNow_btn">
         <Link to="/login"><Button border="none" bg="blue.500" color="white"> {"Buy Plan" } </Button></Link>
         </div>
