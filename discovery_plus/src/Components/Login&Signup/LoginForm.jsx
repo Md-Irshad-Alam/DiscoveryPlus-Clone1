@@ -10,10 +10,12 @@ import Dialog from "@mui/material/Dialog";
 import style from './login.css'
 import { useNavigate } from "react-router-dom";
 import config from "../../config/config";
+import AccountDetailsCard from "./UserDetails";
 
 export default function LoginForm() {
   let history = useNavigate()
   const { showLoginForm, setShowLoginForm , user, login} = useContext(AuthContext);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [formType, setFormType] = useState("login");
@@ -58,8 +60,7 @@ export default function LoginForm() {
           fullWidth
           onClick={() =>{
             login(email, password)
-            // history('/home')
-            // window.alert("login Successful")
+           
           }}
         >
           Login
@@ -82,6 +83,7 @@ export default function LoginForm() {
             </a>
           </DialogActions>
         </DialogContent>
+       
     
     </div>
     </div>

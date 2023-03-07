@@ -42,6 +42,11 @@ body{
  .inner_conter  label{
   color: rgb(214, 208, 208);
  }
+ .userInfo{
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+ }
  @media screen and (min-width:350px) and (max-width:720px) {
     .inner_conter {
         border: 1px solid whitesmoke;

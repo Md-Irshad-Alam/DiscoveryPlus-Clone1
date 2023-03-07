@@ -10,7 +10,6 @@
 
 .navbar_main_container{
 width: auto;
-overflow: hidden;
 font-size: 1rem;
 
 
@@ -54,15 +53,13 @@ font-size: 1rem;
     overflow-x: hidden;
      opacity: 0.8;
     background: transparent;
-   
-  /*  */
  opacity: 100%;
 
    
 }
 .search_itmes:hover{
 
-    background-color: rgb(118, 118, 118);
+    background-color: rgb(13, 9, 9);
     color: wheat; 
     font-size: 1rem;
     cursor: pointer;
@@ -83,15 +80,30 @@ font-size: 1rem;
     width: 60px;
     height: 60px;
 }
+.BuyNow_btn{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.accoutInfo{
 
+    height: fit-content;
+    background-color: red;
+    color: rgb(122, 104, 104);
+   
 
-
+}
 
 @media screen and (min-width:200px) and (max-width:720px) {
     .navbar_main_container{
        
-
+        width: fit-content;
+       
     }
+    .navbar_main_container img{
+       
+    }
+    
     .search_container {
         
     }
@@ -101,4 +113,16 @@ font-size: 1rem;
         content-visibility: hidden;
     }
 }
+.accoundinfo{
+    background-color: red;
+    
+}
+.lefthandpart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    justify-content: space-around;
+    margin:10px;
 
+}

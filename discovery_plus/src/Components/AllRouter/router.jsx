@@ -21,7 +21,6 @@ function AllRouter() {
       
       <Routes>
          <Route path="" element={<Home/>}/>
-
         <Route path="/home" element={<Home/>}/> 
          <Route path='/explore's element={<Explore/>}/>
          <Route path='/Shows_You_Love's element={<ShowYouLove/>}/>

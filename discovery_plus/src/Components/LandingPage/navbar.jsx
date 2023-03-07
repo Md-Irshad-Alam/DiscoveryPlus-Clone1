@@ -1,8 +1,7 @@
 import { Search2Icon } from "@chakra-ui/icons";
-import {Flex,Box,Spacer, Image,Center, Button, ChakraProvider,} from "@chakra-ui/react";
+import {Flex,Box,Spacer, Image,Center, Button, ChakraProvider, useFocusEffect, Show, Input,} from "@chakra-ui/react";
 import {json, Link} from "react-router-dom"
 import syle from './navbar.css'
-// import Typography from "@mui/material/Typography";
 import {useState, useEffect} from 'react'
 import Login from "../Login&Signup/Login";
 import RegisterForm from "../Login&Signup/RegisterForm";
@@ -11,23 +10,19 @@ import React, { useContext } from "react";
 import AuthContext from "../Context/context";
 import LoginForm from "../Login&Signup/LoginForm";
 import config from "../../config/config";
+import { width } from "@mui/system";
+import { Hidden } from "@mui/material";
 
+export const Navbar= ({user}) => {
 
-
-
-
-
-
-export const Navbar= ({ children }) => {
-   
  let history = useNavigate();
- const name = config.password;
- let pass = config.userName
- const { user, setShowLoginForm, logout } = useContext(AuthContext);
+
  const [show, setshow]  = useState("login");
- const [data, setdata] = useState([]);
  const [datas, setDatas] = useState([]);
-console.log(user +"this is from the navbar");
+
+ const [showNewComponent, setShowNewComponent] = useState(true);
+const [username , setusername] = useState( user)
+
 const debounce = (calback)=>{
 let timmer;
 return function (...args){
@@ -35,71 +30,45 @@ return function (...args){
  if(timmer) clearTimeout(timmer);
  timmer = setTimeout(()=>{
    calback.apply(context, args)
- }, 1000)
+ }, 100)
 
 }
 }
 
 const handlechange = async (e) => {
  const {value}=e.target
-
- console.log(value)
  const result = await fetch(`https://testapi-7cxh.onrender.com/Watching?q=${value}`);
  const out = await result.json();
- setDatas(out);
-
+ setDatas(out)
 };
 
-
-
-let username = ''
- const hidelogin = () => {
-   setshow("register")
-   if(user==null){
-     window.location.reload();
-    }else{
-     history('/login')
-     let name= user
-     username = name.name;
- 
-    }
- 
- };
-
-
- const showlog = () => {
-   setshow(true)
-   };
-
-
-
-
+console.log(!user);
 
 return (
-   <div className="navbar_main_container">
+   <div className="navbar_main_container" >
        <ChakraProvider >
          <Flex bg="black" alignItems="center" h="60px"gap={7} justifyContent={"center"} >
-            <Box display="flex" gap={4} >
-            <Image w="200px" alt="discovery Logo" src="./login_logo.png" />
-         
-         </Box>
+            
+              <Box display="flex" gap={4}>
+              <Image w="200px" alt="discovery Logo" src="./login_logo.png" />
+              </Box>
+           
+
         
-         <Box  display="flex" gap={4} color="gray.200" maxw="300px" 
+        <Box  display="flex" fontSize="1rem" color="gray.200" maxw="auto" 
           font-family='Roboto-Regular, sans-serif'
           font-weight="700">
             <Link to="/" >Home</Link>
             <Link to="/explore">Explore</Link> 
             <Link to="/kids">Kids</Link>
-            <Link to="/shorts">Shorts</Link>
-            <Link to="/mindblown">Mindblown</Link> 
+            <Link to="/shorts">Shorts</Link> 
             <Link to="/premium">Premium</Link>
         </Box>
-      <Spacer/>
-        <Center >
-      
+        <Spacer/>
+        <Box display="flex" justifyContent="space-between">
         <div className="search_main_container">
                 <div className="search_input">
-                    <input placeholder="Search for a show, etc" w={'330px'} onChange={debounce(handlechange)} onkeyup={debounce}/>
+                    <Input placeholder="Search for a show, etc" w='fit-content' onChange={debounce(handlechange)} onKeyUp={debounce} />
                 </div>
               
              <div className="outter_serrch_container">
@@ -118,21 +87,35 @@ return (
                }
              </div>  
              </div>
-            </div>
-        
+            </div>  
+            <div >
              
-            
-              <Button onClick={()=>{
-               setshow(show==="login"? history('/login') :history('/register') )
-
-              }} margin="10px"> {show==="login" ? "Login": "Log Out"}</Button>
+             
 
               
-        <div  className="BuyNow_btn">
-        <Link to="/login"><Button border="none" bg="blue.500" color="white"> {"Buy Plan" } </Button></Link>
+                <div>
+                  {!user===undefined ? (
+                    <Button onClick={() => setshow("My account")}>My account</Button>
+                  ) : (
+                    <Link to="/login">
+                      <Button border="none" bg="blue.500" color="white">
+                        Login
+                      </Button>
+                    </Link>
+                  )}
+                </div>
+            
+              
+            </div>
+
+        <div  className="BuyNow_btn" style={{overflow:"hidden"}}>
+        <div>
+          <Link to="/login"><Button border="none" bg="blue.500" color="white">{"Buy Plan"}</Button></Link>
+          </div>
         </div>
-   
-        </Center>
+      </Box>  
+        
+       
       
        </Flex>
        </ChakraProvider>
