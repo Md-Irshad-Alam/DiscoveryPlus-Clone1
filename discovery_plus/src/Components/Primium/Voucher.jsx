@@ -20,8 +20,6 @@ const Voucher = ({data}) => {
       window.alert("Wrong Voucher Code")
       }
   }
- 
-  console.log(voucher);
   return (
       <div className='voucher_container'>
        <div className='image_part'>

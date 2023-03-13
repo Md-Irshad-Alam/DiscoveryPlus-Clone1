@@ -12,7 +12,7 @@ export const Home=()=> {
     return (
       
     <>
-    <Navbar/>
+   
     <Corosuel />
      <Slider />
      <ShowYouLove/>

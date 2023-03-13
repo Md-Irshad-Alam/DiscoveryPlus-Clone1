@@ -10,7 +10,7 @@ const Short =() => {
     const [category_all2, setCategory_all2] = useState("category_opt_all2");
     return(
        <>
-       <Navbar/>
+      
         <div className="shorts_main">
             <div className="shorts_mainDiv">
                 <div className="shorts_letfBox_section">

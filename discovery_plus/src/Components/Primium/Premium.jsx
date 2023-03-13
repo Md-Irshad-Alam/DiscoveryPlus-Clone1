@@ -26,7 +26,7 @@ import Tv_stream from "../Images/premi_tv.jpg";
 import Safe from "../Images/safe_kids.jpg";
 import Access from "../Images/get_access.jpeg"
 import "./premium.css"
-import { Navbar } from "../LandingPage/navbar";
+
 import { Link } from "react-router-dom";
 
 
@@ -61,8 +61,7 @@ export const Premium=()=>{
     return<>
   
     <div>
-        <Navbar/>
-
+    
         <div className="premimum_ini">
     <div className="premi_background" style={{ backgroundImage:`url(${Premi_back})` }}> 
     <div className="background_lighting">

@@ -15,11 +15,14 @@ import Login from '../Login&Signup/Login'
 import { AuthContextProvider } from '../Context/context'
 import { Navbar } from '../LandingPage/navbar'
 import Voucher from '../Primium/Voucher'
+import Payment from '../Payment/Payment'
 function AllRouter() {
   return (
     <div >
-      
+       <AuthContextProvider>
+       <Navbar/>
       <Routes>
+       
          <Route path="" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/> 
          <Route path='/explore's element={<Explore/>}/>
@@ -31,8 +34,10 @@ function AllRouter() {
         <Route path='/shorts' element={<Short/>}/>
         < Route path='videopremium' element={<Video_prem/>}/>
         < Route path='/premium' element={<Premium/>}/> 
+        < Route path='/payment' element={<Payment/>}/> 
         <Route path='*' element={<div>Not Found</div>}/> 
       </Routes>
+      </AuthContextProvider>
     </div>
   )
 }

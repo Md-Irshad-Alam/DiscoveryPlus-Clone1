@@ -3,19 +3,13 @@ import {getLoggedInUser, loginApi} from './User';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
-const AuthContext = React.createContext({
-    // user: null,
-    // setUser: (user) => {},
-    // showLoginForm: false,
-    // setShowLoginForm: (show) => {},
-    // login: (email, password) => {},
-    // logout: () => {},
-})
+
 
 export function AuthContextProvider({children}) {
     let history = useNavigate();
     const [user, setUser] = useState(null);
     const [name, setname] = useState(undefined);
+    const [email, setemail] = useState(undefined);
 
     const [showLoginForm, setShowLoginForm] = useState(false);
 
@@ -28,8 +22,10 @@ export function AuthContextProvider({children}) {
 
             setShowLoginForm(false);
             const user = response.data;
+           
             window.alert("login Successful")
             history('./home')
+            window.location.reload();
         })
         .catch(err => {
             window.alert("Login faild")
@@ -47,17 +43,21 @@ export function AuthContextProvider({children}) {
             const user = response.data;
             setUser(user);
             setname(user.data.name);
-            // console.log(user.data.name)
+            setemail(user.data.email)
+            console.log(user.data.name)
            
         })
     }, [showLoginForm])
 
     return <AuthContext.Provider value={{
-        user, setUser, name,setname,
+        user, setUser, name,setname,email,
         showLoginForm, setShowLoginForm,
-        login, logout,
+        login, logout
     }}>
         {children}
     </AuthContext.Provider>
 }
+const AuthContext = React.createContext({
+    
+})
 export default AuthContext;

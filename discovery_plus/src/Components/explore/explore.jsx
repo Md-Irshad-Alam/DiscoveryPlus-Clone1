@@ -1,23 +1,4 @@
 
-// export const Explore =()=>{
-//     return <>
-    
-//     <div className="container" style={{height: "100%", width: "100%", backgroundColor: "#1a1c21"}}>
-//      <div className="appstyle">
-//         <div className="blockone">
-//             <div className="exploreheader">
-//                 <h6>Live Channels</h6>
-//             </div>
-//             <div className="live_channel_grid">
-
-//             </div>
-//         </div>
-//      </div>
-//     </div>
-    
-
-//     </>
-// }
 import React from "react";
 
 import AnE from "./Images/a&e_explore.png"
@@ -38,15 +19,13 @@ import Turbo from "./Images/turbo_explore.jpg";
 import "./CSS/explore.css"
 import { Link } from "react-router-dom";
 import Short from "../shorts/short";
-import {Kids} from "../Kids_componanrts/Kids"
-import { Navbar } from "../LandingPage/navbar";
+
 
 
 
 export const Explore=()=>{
 
     return <>
-    <Navbar/>
    <div id="main"  >
 
      <div id="app" className="appStyle">

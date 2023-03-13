@@ -24,9 +24,7 @@ export default function LoginForm() {
   };
   return (
     <div className="parent_container_login"> 
-        <div className="loginimage_logo">
-         <img src="./login_logo.png" alt="" />
-        </div>
+        
        <div className="title_login">
        <h4>Sign Now</h4>
        </div>

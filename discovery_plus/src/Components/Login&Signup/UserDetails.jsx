@@ -17,14 +17,15 @@ export default function AccountDetailsCard() {
   // console.log(user.data.name);
 
   // console.log(User)
-
+  // <Navbar user={name}/> 
   if (!user) return "";
 
   return (
- 
+
     <div className="userInfo">
-      <Navbar user={name}/>
-     <span>{name}</span>
+       
+     <AuthContext.Provider value={user}/>
+  
     </div>
   );
 }

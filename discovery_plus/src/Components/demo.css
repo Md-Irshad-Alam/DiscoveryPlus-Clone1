@@ -1,0 +1,215 @@
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0c0c0c;
+    color: #838991;
+    padding: 10px;
+    width: 100%;
+    font-weight: 500;
+   
+  }
+  .navbar2_main{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.space{
+    display: flex;
+}
+.Buy_pan_btn {
+    color: white;
+    background-color: rgb(22, 155, 231);
+    padding: 0px;
+    width: 100%;
+    display: block;
+
+}
+ 
+  
+  .navbar-toggle {
+    display: none;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .navbar-toggle-icon {
+    font-size: 30px;
+  }
+  
+
+  .left_part_nav_2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    font-size: 1.5rem;
+
+  }
+
+  .navbar-links.expanded {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    /* background-color: #555; */
+    overflow: hidden;
+    transition: all 0.5s ease;
+    z-index: 999;
+  }
+  .navbar-links {
+    display: flex; 
+    font-size: 1rem;
+    justify-content: space-between;
+    gap: 1em;
+   
+
+  }
+  .navbar-links a{
+    text-decoration: none;
+
+  }
+  .navbar-links a:hover{
+    
+   color: white;
+   border: 1px solid rgb(46, 45, 45) ;
+  }
+  .navbar-links.expanded a {
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+  }
+  .navbar-links.expanded a:hover{
+    color: white;
+    border: 1px solid rgb(31, 31, 31);
+    
+  }
+
+  /* right part start */
+
+  .rightNavbar{
+    display: flex;
+    justify-content: space-between;
+    row-gap: 10px;
+    align-items: c;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+  }
+  .buttonpart{
+    display: flex;
+    gap: 5px;
+    
+  }
+  .buttonpart button{
+    background-color: rgb(28, 109, 238);
+    color: white;
+    font-weight: 500;
+  }
+  .loginPartbtn{
+    border: 1px solid white;
+    padding: 3px;
+    background-color: black;
+    padding:0 7px 0 7px;
+    
+  }
+  .loginPartbtn button{
+    border-radius: none;
+    background-color: black;
+  }
+  .buyplainbtn button:hover{
+    background-color: rgb(28, 109, 238);
+  }
+  
+  .navbar-search {
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid rgb(61, 61, 61);
+    background-color: rgb(42, 42, 42);
+    border-bottom: #707070 solid 2px;
+  }
+
+  
+  .navbar-search input {
+    width:100% ;
+    padding: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(36, 36, 36);
+    width: 20rem;
+   
+  }
+
+
+  
+  @media screen and (max-width: 400px) {
+    .navba2 {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-home {
+      order: 0;
+      margin-right: auto;
+
+    }
+  
+    .navbar-links {
+      order: 2;
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      
+    }
+  
+    .navbar-links.expanded {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .navbar-links a {
+      color: #838991;
+      display: block;
+      text-decoration: none;
+      border-bottom: 1px solid #fff;
+      cursor: pointer;
+    }
+    .navbar-search input {
+        width:80% ;
+        padding: 5px;
+        outline: none;
+        border: none;
+        background-color: rgb(36, 36, 36);
+        margin-left: 5px;
+       
+      }
+
+      .buttonpart{
+        display: none;
+      }
+  }
+  
