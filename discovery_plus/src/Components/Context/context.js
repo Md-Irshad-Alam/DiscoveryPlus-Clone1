@@ -16,16 +16,22 @@ export function AuthContextProvider({children}) {
     function login(email, password) {
         loginApi(email, password)
         .then(response => {
+            // const user = response.data;
+            console.log(user);
            
+            if(user){
+              window.alert("User Already logged in");
+              history('/home')
+            }else{
+                window.alert("login Successful")
+                window.location.reload();
+                history('/home')
+            }
             const token = response.data.token;
             localStorage.setItem('auth-token', token);
 
             setShowLoginForm(false);
-            const user = response.data;
            
-            window.alert("login Successful")
-            history('./home')
-            window.location.reload();
         })
         .catch(err => {
             window.alert("Login faild")
@@ -44,7 +50,7 @@ export function AuthContextProvider({children}) {
             setUser(user);
             setname(user.data.name);
             setemail(user.data.email)
-            console.log(user.data.name)
+           
            
         })
     }, [showLoginForm])

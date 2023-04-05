@@ -15,9 +15,9 @@ export default function AccountDetailsCard() {
   const [User, setUser] = useState("");
   const {user , name} = useContext(AuthContext)
   // console.log(user.data.name);
-
   // console.log(User)
   // <Navbar user={name}/> 
+  
   if (!user) return "";
 
   return (

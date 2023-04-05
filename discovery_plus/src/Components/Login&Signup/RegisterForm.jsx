@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import DialogContent from "@mui/material/DialogContent";
 import { registerApi } from "../Context/User";
-import {toast} from "react-toastify";
+import {ToastContainer, toast} from "react-toastify";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogActions from "@mui/material/DialogActions";
 import AuthContext from "../Context/context";
@@ -24,12 +24,26 @@ export default function RegisterForm() {
   const register = () => {
 
     registerApi(name, email, password)
-    .then(() => setFormType("login"))
-    .catch(() => {
-      toast('Sign Up didn\'t work', {
-        type: 'error'
-      })
-    });
+    .then((responce)=>{
+      
+      if(responce.status===200){
+        setFormType("login");
+        window.alert("Registration Suessfull");
+        history('/login')
+      }
+      
+    })
+    .catch((error)=>{
+      
+      if(error.message==="Request failed with status code 401"){
+        window.alert("User Already Registered with this email")
+        setTimeout((e)=>{
+          history('/login')
+        }, 2000);
+      }else{
+        window.alert("Registration faild")
+      }
+  })
   };
 
   return (
@@ -39,7 +53,7 @@ export default function RegisterForm() {
        <h4>Sign Now</h4>
        </div>
         <div className="inner_conter">
-
+       
    
     <DialogContent >
     <TextField
@@ -81,8 +95,10 @@ export default function RegisterForm() {
       fullWidth
       onClick={() => {
         register()
-        history('/login');
-        window.alert("Registration Successful")
+        setTimeout(()=>{
+         
+        },2000)
+       
         
       }}
     >
