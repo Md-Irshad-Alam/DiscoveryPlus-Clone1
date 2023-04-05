@@ -1,3 +1,4 @@
+
 .navbar2 {
     display: flex;
     justify-content: space-between;
@@ -7,6 +8,9 @@
     padding: 10px;
     width: 100%;
     font-weight: 500;
+    position: fixed;
+    z-index: 99;
+
    
   }
   .navbar2_main{
@@ -133,16 +137,6 @@
     background-color: rgb(28, 109, 238);
   }
   
-  .navbar-search {
-    padding: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    border: 1px solid rgb(61, 61, 61);
-    background-color: rgb(42, 42, 42);
-    border-bottom: #707070 solid 2px;
-  }
 
   
   .navbar-search input {
@@ -150,10 +144,15 @@
     padding: 5px;
     outline: none;
     border: none;
-    background-color: rgb(36, 36, 36);
-    width: 20rem;
+    background-color: rgb(3, 3, 3);
+ 
    
   }
+  .search_main_container {
+    border-bottom: 1.5px solid rgb(135, 132, 132);
+    width: 100%;
+  }
+  
 
 
   
