@@ -7,7 +7,7 @@ import Card from './Card'
 function Watch() {
 
   return (
-    <div className="bg-plus_back">
+    <div className="bg-plus_back p-4% pb-0 }" >
    
       <Video/>
       <Watch_footer/>

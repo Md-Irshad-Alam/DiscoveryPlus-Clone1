@@ -1,6 +1,8 @@
 
 .navbar2 {
     display: flex;
+    position: absolute;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     background-color: #0c0c0c;
@@ -10,6 +12,7 @@
     font-weight: 500;
     position: fixed;
     z-index: 99;
+   
 
    
   }

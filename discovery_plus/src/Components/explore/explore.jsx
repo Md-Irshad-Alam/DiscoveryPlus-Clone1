@@ -28,8 +28,8 @@ export const Explore=()=>{
     return <>
    <div id="main"  >
 
-     <div id="app" className="appStyle">
-         <div className="block1">
+     {/* <div id="app" className="appStyle"> */}
+         <div style={{padding: "4%",  }}>
          <div id="exploreHeader">
              <h6 className="heading">Live Channels</h6>
          </div>
@@ -295,7 +295,7 @@ export const Explore=()=>{
      </div>
      
      
-    </div>
+    {/* </div> */}
 
     </>
 }

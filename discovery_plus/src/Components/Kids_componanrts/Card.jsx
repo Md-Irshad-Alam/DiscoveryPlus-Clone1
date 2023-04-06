@@ -36,84 +36,86 @@ function Card() {
   return (
     
     <>
+    <div className="card_coontainer_n">
     <div className='watching_cart sm '>
         
-    <div className='ViewAll'> 
-        <h3>Everyone's Watching</h3>
-  
-        <button onClick={()=>getdata()}>View All</button>
-        </div> 
-        <div className='card_container'>
-       
-                    {
-            state.map((data, id)=>{
-            return(
-              <>
-              <Link to="/watch">
-              <div className='content_img' onClick={()=>{
-                   localStorage.setItem("Clicked", JSON.stringify({data}));
-                }}>
-               
-                <img src={data.img} alt=""  />
-              <div className="visible relative top-0 left-0">
-              <i class="fa-solid fa-crown text-xl bg-sky-600 w-6 h-6 p-0 ml-2 mt-2 rounded-1 bg-hex flex justify-center"/>
-              </div>
-               <div className='hide_title'>
-                   <div className='play_btn'>
-                     <i class="fa-regular fa-circle-play"></i>
-                     </div>
-                     <h4 className='text-md'>{data.title}</h4>
-                    <p className='text-sm text-gray-400'>{data.dis}</p>
-               </div>
-              </div>  </Link>
-            
-              </>
-            )
-
-            })
-        }
-     
-    </div>
-    </div>
-    <br />
-    <div className='watching_cart tablet'>
-        <div className='flex-end viewAll'> 
-          <h3>Little Singham VS Kaal</h3>
-          <button onClick={()=>getdata2()}>View All</button>
-        </div>
-            
-        <div className='card_container'>
-                    {
-            state2.map((data, id)=>{
+        <div className='ViewAll'> 
+            <h3>Everyone's Watching</h3>
+      
+            <button onClick={()=>getdata()}>View All</button>
+            </div> 
+            <div className='card_container'>
+           
+                        {
+                state.map((data, id)=>{
+                return(
+                  <>
+                  <Link to="/watch">
+                  <div className='content_img' onClick={()=>{
+                    console.log(Object.assign(data));
+                       localStorage.setItem("Clicked", JSON.stringify(Object.assign(data)));
+                    }}>
+                   
+                    <img src={data.img} alt=""  />
+                  <div className="visible relative top-0 left-0">
+                  <i class="fa-solid fa-crown text-xl bg-sky-600 w-6 h-6 p-0 ml-2 mt-2 rounded-1 bg-hex flex justify-center"/>
+                  </div>
+                   <div className='hide_title'>
+                       <div className='play_btn'>
+                         <i class="fa-regular fa-circle-play"></i>
+                         </div>
+                         <h4 className='text-md'>{data.title}</h4>
+                        <p className='text-sm text-gray-400'>{data.dis}</p>
+                   </div>
+                  </div>  </Link>
                 
-            return(
-              <>
-              
-          <Link to="/watch">
-              <div className='content_img' onClick={()=>{
-                   localStorage.setItem("Clicked", JSON.stringify({data}));
-                }}>
-               
-                <img src={data.img} alt=""/>
-              <div className="visible relative top-0 left-0">
-                <i class="fa-solid fa-crown text-xl bg-sky-600 w-6 h-6 p-0 ml-2 mt-2 rounded-1 bg-hex flex justify-center"/>
-              </div>
-               <div className='hide_title'>
-                   <div className='play_btn'>
-                     <i class="fa-regular fa-circle-play"></i>
-                     </div>
-                    <h4 className='text-md text-white'>{data.title}</h4>
-                    <p className='text-sm text-gray-400'>{data.dis}</p>
-               </div>
-              </div>
-          </Link>
-              </>
-            )
-
-            })
-        }
-     
-    </div>
+                  </>
+                )
+    
+                })
+            }
+         
+        </div>
+        </div>
+        <div className='watching_cart tablet'>
+            <div className='ViewAll'> 
+              <h3>Little Singham VS Kaal</h3>
+              <button onClick={()=>getdata2()}>View All</button>
+            </div>
+                
+            <div className='card_container'>
+                        {
+                state2.map((data, id)=>{
+                    
+                return(
+                  <>
+                  
+              <Link to="/watch">
+                  <div className='content_img' onClick={()=>{
+                       localStorage.setItem("Clicked", JSON.stringify(Object.assign(data)));
+                    }}>
+                   
+                    <img src={data.img} alt=""/>
+                  <div className="visible relative top-0 left-0">
+                    <i class="fa-solid fa-crown text-xl bg-sky-600 w-6 h-6 p-0 ml-2 mt-2 rounded-1 bg-hex flex justify-center"/>
+                  </div>
+                   <div className='hide_title'>
+                       <div className='play_btn'>
+                         <i class="fa-regular fa-circle-play"></i>
+                         </div>
+                        <h4 className='text-md text-white'>{data.title}</h4>
+                        <p className='text-sm text-gray-400'>{data.dis}</p>
+                   </div>
+                  </div>
+              </Link>
+                  </>
+                )
+    
+                })
+            }
+         
+        </div>
+        </div>
     </div>
     </>
   )

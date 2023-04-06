@@ -4,8 +4,8 @@ import style from "./KIDS_css/Screen.css"
 import style2 from "./KIDS_css/premium.css"
 
 function Video() {
-    let {data} =JSON.parse(localStorage.getItem("Clicked"))|| []
-   
+    let data =JSON.parse(localStorage.getItem("Clicked"))|| []
+    console.log(data.title);
     
   return (
     <div className='Image_container bg-plus_back'>

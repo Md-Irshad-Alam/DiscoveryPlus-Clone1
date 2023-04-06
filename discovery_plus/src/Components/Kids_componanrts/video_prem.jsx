@@ -5,7 +5,7 @@ import { Link, Navigate, NavLink } from 'react-router-dom'
 
 
 function Video_prem() {
-    const {data}= JSON.parse(localStorage.getItem("Clicked")) || [];
+    const data= JSON.parse(localStorage.getItem("Clicked")) || [];
   return (
    <>
     <div className='Image_container bg-plus_back mt-3 '>

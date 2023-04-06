@@ -7,14 +7,17 @@
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 5px;
-    width: 96%;
+    width: 92%;
     color: white;
     margin-top: 30px;
     flex-wrap: wrap;
     margin: auto;
-   
- 
 
+}
+.card_coontainer_n {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
 }
 .flex-end{
     display: flex;
@@ -132,10 +135,13 @@ i{
 }
 .ViewAll{
     display: flex;
-    justify-content: center;
+   
     width: 100%;
     box-sizing: border-box;
-    justify-content: space-between;   
+    justify-content: space-between;  
+    height: 30px;
+    font-size: 1.2rem;
+    margin-bottom: 5px; 
 }
 
 @media screen and (min-width:350px) and (max-width:720px) {
