@@ -1,7 +1,7 @@
 .shorts_main {
     background-color: #1a1c21;
     min-height: calc(100vh - 200px);
-    padding: 10px;
+    margin-top: 5%;
   
     display: flex;
 }
@@ -17,8 +17,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-right: 12px;
-    width: 25%;
+ 
+    width: 21%;
+    position: fixed;
+    left: 1%;
+    z-index: 99;
     
     
   
@@ -276,10 +279,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
-    margin-right: 12px;
-    width: 25%;
+    width: 22%;
     padding: 5px;
+    position: fixed;
+    right: 0;
+    z-index: 99;
 }
 .discov_Ad {
     position: sticky;
@@ -356,6 +360,9 @@
     }
     .shorts_letfBox_section{
         display: none;
+    }
+    .shorts_main {
+        margin-top: 10%;
     }
     .content_shorts{
         width: 100%;

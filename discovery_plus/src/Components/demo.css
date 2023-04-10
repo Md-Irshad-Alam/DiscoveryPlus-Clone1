@@ -7,7 +7,7 @@
     align-items: center;
     background-color: #0c0c0c;
     color: #838991;
-    padding: 10px;
+    /* padding: 10px; */
     width: 100%;
     font-weight: 500;
     position: fixed;
@@ -52,69 +52,62 @@
   .navbar-toggle-icon {
     font-size: 30px;
   }
-  
+  /* left part */
 
   .left_part_nav_2{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    align-items: center;
-    gap: 10px;
-    width: max-content;
-    font-size: 1.5rem;
+    column-gap: 2rem;
 
+ 
   }
+  /* right part */
+    .rightNavbar{
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      align-items: center;
+    }
 
   .navbar-links.expanded {
-    flex-direction: column;
+    display: flex;
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
-    /* background-color: #555; */
+    font-size: 1.3rem;
     overflow: hidden;
     transition: all 0.5s ease;
     z-index: 999;
   }
   .navbar-links {
     display: flex; 
-    font-size: 1rem;
-    justify-content: space-between;
-    gap: 1em;
-   
+    box-sizing: border-box;
+    column-gap: 1rem;
 
   }
   .navbar-links a{
     text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
 
   }
+ 
   .navbar-links a:hover{
-    
    color: white;
-   border: 1px solid rgb(46, 45, 45) ;
+   position: relative;
+   top: 2px;
+   border-bottom: 1px solid rgb(150, 150, 150) ;
+
   }
   .navbar-links.expanded a {
     display: block;
     text-decoration: none;
     border-bottom: 1px solid #fff;
   }
-  .navbar-links.expanded a:hover{
-    color: white;
-    border: 1px solid rgb(31, 31, 31);
-    
-  }
+ 
 
   /* right part start */
-
-  .rightNavbar{
-    display: flex;
-    justify-content: space-between;
-    row-gap: 10px;
-    align-items: c;
-    align-items: center;
-    gap: 10px;
-    width: max-content;
-  }
   .buttonpart{
     display: flex;
     gap: 5px;
@@ -127,9 +120,8 @@
   }
   .loginPartbtn{
     border: 1px solid white;
-    padding: 3px;
     background-color: black;
-    padding:0 7px 0 7px;
+    padding:0 3px 0 3px;
     
   }
   .loginPartbtn button{
@@ -141,16 +133,6 @@
   }
   
 
-  
-  .navbar-search input {
-    width:100% ;
-    padding: 5px;
-    outline: none;
-    border: none;
-    background-color: rgb(3, 3, 3);
- 
-   
-  }
   .search_main_container {
     border-bottom: 1.5px solid rgb(135, 132, 132);
     width: 100%;
@@ -187,18 +169,43 @@
   
     .navbar-links.expanded {
         display: flex;
-        flex-direction: row;
+        justify-content: flex-start;
+        color: rgb(3, 3, 3);
+        row-gap: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        background-color: rgb(65, 64, 64);
+        width: fit-content;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         margin-top: 10px;
-        justify-content: center;
-        align-items: center;
+        animation: textapear 1s ease-out;
     }
   
     .navbar-links a {
-      color: #838991;
-      display: block;
+      color: rgb(252, 247, 247);
       text-decoration: none;
-      border-bottom: 1px solid #fff;
       cursor: pointer;
+      display: none;
+      width: 100%;
+      animation: textapear 1s ease-out;
+    }
+    @keyframes textapear {
+      0%{
+        opacity: 0;
+        border-bottom: 3px solid white;
+      
+       
+      }
+      100%{
+        opacity: 1;
+        background-color: rgb(65, 64, 64);
+        color: white;
+        border-bottom: 3px solid white;
+
+  
+      }
     }
     .navbar-search input {
         width:80% ;

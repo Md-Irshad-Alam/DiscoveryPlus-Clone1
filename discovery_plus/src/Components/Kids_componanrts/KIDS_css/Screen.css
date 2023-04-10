@@ -7,6 +7,9 @@
 
     
 }
+.main_kids_container{
+    margin-top: 3%;
+}
 
 
 
@@ -19,12 +22,15 @@
     margin: auto;
 }
 
-@media screen and (min-width:220px) and (max-width:420px) {
+@media screen and (min-width:220px) and (max-width:720px) {
     .Tittle_bar{
         display: flex;
         flex-direction: column;
         margin-bottom: -30px;
 
+    }
+    .main_kids_container {
+        margin-top: 15%;
     }
        .slider_left_part{
         background: red;

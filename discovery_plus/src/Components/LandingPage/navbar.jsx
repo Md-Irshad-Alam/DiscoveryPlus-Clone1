@@ -35,7 +35,6 @@ console.log(userexpanded)
   const handleuser = (e) => {
     setuserIsExpanded(!userexpanded);
   };
-  // debounce functions 
 
   const debounce = (calback)=>{
     let timmer;
@@ -44,7 +43,7 @@ console.log(userexpanded)
      if(timmer) clearTimeout(timmer);
      timmer = setTimeout(()=>{
        calback.apply(context, args)
-     }, 100)
+     }, 1000)
     
     }
     }
@@ -135,8 +134,7 @@ console.log(userexpanded)
             <div className="search_main_container">
                 <div className="search_input">
                     <input placeholder="Search for a show, etc" value={searchQuery}  w='fit-content' onChange={handlechange}/>
-
-                 
+                    
                 <div onClick={()=>{
                   handleVoiceSearch();
                 }}>
@@ -198,7 +196,7 @@ console.log(userexpanded)
                          <Button onClick={logout}>Logout</Button>
                        </div>
                 </div>
-                <br />
+              
                 <div className="buyplainbtn">
                     {
                       name ?(<Link to='/premium'><Button>Buy Plan</Button></Link>):(<Link to='/login'><Button>Buy Plan</Button></Link>)

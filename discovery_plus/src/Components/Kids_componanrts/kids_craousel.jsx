@@ -40,7 +40,7 @@ const slider = [{
 
   return (
    
-    <div  className="main_kids_container text-sm mt-4">
+    <div  className="main_kids_container text-sm">
       <div id="carouselExampleCaptions" className="carousel slide " data-bs-ride="carousel" style={{ backgroundColor: "rgb(18,19,23)", padding: "4%", paddingTop: "0px", paddingBottom: "0px" }} >
         <div className="carousel-inner" style={{ padding: "3%" }}>
 
