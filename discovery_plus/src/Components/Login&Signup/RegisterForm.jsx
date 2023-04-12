@@ -29,7 +29,7 @@ export default function RegisterForm() {
       if(responce.status===200){
         setFormType("login");
         window.alert("Registration Suessfull");
-        history('/login')
+        history('/home');
       }
       
     })

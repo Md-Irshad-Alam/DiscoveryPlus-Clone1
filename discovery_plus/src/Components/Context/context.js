@@ -24,8 +24,9 @@ export function AuthContextProvider({children}) {
               history('/home')
             }else{
                 window.alert("login Successful")
+               
+                history('/home');
                 window.location.reload();
-                history('/home')
             }
             const token = response.data.token;
             localStorage.setItem('auth-token', token);
